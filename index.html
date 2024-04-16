@@ -12,7 +12,7 @@
             max-width: 100%;
             overflow-x: hidden; /* Prevent horizontal scrolling */
         }
-        embed {
+        .pdf-viewer {
             width: 100%;
             height: 100vh; /* Full viewport height */
         }
@@ -20,11 +20,31 @@
 </head>
 <body>
     <div class="container">
-        <!-- Your PDF embed code -->
-        <embed src="Yogesh-Rathee.pdf#toolbar=0&view=fith" type="application/pdf" />
+        <!-- Load the PDF.js library -->
+        <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+
+        <!-- Create a div to hold the PDF viewer -->
+        <div class="pdf-viewer"></div>
+
+        <!-- Load the PDF file using JavaScript -->
+        <script>
+            // Get the PDF file URL
+            const url = "Yogesh-Rathee.pdf";
+
+            // Create a new PDF viewer
+            const pdfViewer = new PDFJS.PDFViewer({
+                container: '.pdf-viewer',
+                scrollingMode: 'vertical',
+                enableFileNavigation: false,
+                enableWebNavigation: false,
+            });
+
+            // Load the PDF file
+            pdfJSLib.getDocument(url).promise.then((pdf) => {
+                // Set the PDF file to the viewer
+                pdfViewer.setDocument(pdf);
+            });
+        </script>
     </div>
-    <script>
-        // Additional JavaScript can be added here for functionality, if needed
-    </script>
 </body>
 </html>
