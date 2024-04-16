@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE-Edge">
-        <meta name="viewport" content="width=device-width, initial-scale="1.0">
-        <title>Yogesh-Rathee</title>
-        <style>
-            .container{
-                padding: 20px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <embed src="Yogesh-Rathee.pdf#toolbar=0&view=fith" type="application/pdf" width="100%" height="900px"/>
-        </div>
-    </body>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogesh-Rathee</title>
+    <style>
+        /* Responsive styles */
+        .container{
+            padding: 20px;
+            max-width: 100%;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        embed {
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Your PDF embed code -->
+        <embed src="Yogesh-Rathee.pdf#toolbar=0&view=fith" type="application/pdf" />
+    </div>
+    <script>
+        // Additional JavaScript can be added here for functionality, if needed
+    </script>
+</body>
 </html>
