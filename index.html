@@ -17,6 +17,7 @@ body {
   padding: 20px;
   max-width: 100%;
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  position: relative; /* Required for absolute positioning */
 }
 
 .embed-container {
@@ -39,12 +40,12 @@ body {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .embed-container {
-    padding-bottom: 100vw; /* Adjust aspect ratio for smaller screens */
+    padding-bottom: 90vw; /* Adjust aspect ratio for smaller screens */
   }
 }
 @media (max-width: 768px) {
   .embed-container {
-    padding-bottom: 95vh; /* Adjust aspect ratio for smaller screens */
+    padding-bottom: 100vh; /* Adjust aspect ratio for smaller screens */
   }
 }
 
@@ -52,6 +53,23 @@ body {
 .embed-container embed {
   width: 100vw; /* Full width */
   height: 100vh; /* Full height */
+}
+
+/* Download button styles */
+.download-btn {
+  position: absolute;
+  top: 30px; /* Adjust top position as needed */
+  right: 20px; /* Adjust right position as needed */
+  padding: 20px 30px;
+  background-color: #4CAF50; /* Green background color */
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.5s ease;
+}
+
+.download-btn:hover {
+  background-color: #45a049; /* Darker green color on hover */
 }
 </style>
 </head>
