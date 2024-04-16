@@ -1,50 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yogesh-Rathee</title>
-    <style>
-        /* Responsive styles */
-        .container{
-            padding: 20px;
-            max-width: 100%;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-        }
-        .pdf-viewer {
-            width: 100%;
-            height: 100vh; /* Full viewport height */
-        }
-    </style>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE-Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yogesh-Rathee</title>
+<style>
+/* Responsive styles */
+.container{
+  padding: 20px;
+  max-width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+embed {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <!-- Load the PDF.js library -->
-        <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
-
-        <!-- Create a div to hold the PDF viewer -->
-        <div class="pdf-viewer"></div>
-
-        <!-- Load the PDF file using JavaScript -->
-        <script>
-            // Get the PDF file URL
-            const url = "https://drive.google.com/file/d/1OkCUbAaLW7mXu7aWknQOC7rBOTsg0azf/view?usp=drivesdk";
-
-            // Create a new PDF viewer
-            const pdfViewer = new PDFJS.PDFViewer({
-                container: '.pdf-viewer',
-                scrollingMode: 'vertical',
-                enableFileNavigation: false,
-                enableWebNavigation: false,
-            });
-
-            // Load the PDF file
-            pdfJSLib.getDocument(url).promise.then((pdf) => {
-                // Set the PDF file to the viewer
-                pdfViewer.setDocument(pdf);
-            });
-        </script>
-    </div>
+<div class="container">
+  <!-- Your PDF embed code -->
+  <embed src="https://drive.google.com/file/d/1OkCUbAaLW7mXu7aWknQOC7rBOTsg0azf/view?usp=drivesdk" type="application/pdf" />
+</div>
+<script>
+// Additional JavaScript can be added here for functionality, if needed
+</script>
 </body>
 </html>
